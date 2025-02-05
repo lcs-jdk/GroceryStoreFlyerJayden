@@ -9,16 +9,34 @@ import SwiftUI
 
 struct DepartmentsListView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+           
+//            List(thisWeeksFlyer.departments) { currentDepartment in
+            List {
+                
+                Text("1")
+                Text("2")
+                Text("3")
+
+//                NavigationLink{
+//                    DepartmentDetailView(departmentToShow: currentDepartment)
+//                } label: {
+//                    VStack {
+//                        
+//                        Text(currentDepartment.name)
+//                        Image(currentDepartment.image)
+//                            .resizable()
+//                            .scaledToFit()
+//                    }
+//                }
+                
+            }
+            .navigationTitle("Weekly Flyer")
         }
-        .padding()
     }
 }
 
 #Preview {
     DepartmentsListView()
+    
 }
