@@ -12,11 +12,13 @@ struct DepartmentsListView: View {
         NavigationStack {
            
 //            List(thisWeeksFlyer.departments) { currentDepartment in
-            List {
-                
-                Text("1")
-                Text("2")
-                Text("3")
+            List(thisWeeksFlyer.departments) { currentDepartment in
+
+                NavigationLink {
+                    DepartmentDetailView(departmentToShow: currentDepartment)
+                } label: {
+                    Text(currentDepartment.name)
+                }
 
 //                NavigationLink{
 //                    DepartmentDetailView(departmentToShow: currentDepartment)
